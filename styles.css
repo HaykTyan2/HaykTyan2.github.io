@@ -1,0 +1,380 @@
+/* ======================
+   RESET & BASE
+====================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0f0f0f;
+  color: #eaeaea;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======================
+   HEADER
+====================== */
+/* ===== HEADER GLOW + UNDERLINE (SHARED) ===== */
+
+.header a {
+  position: relative;
+}
+
+/* underline (TEXT LINKS ONLY — not LinkedIn) */
+.header a:not(.linkedin-icon)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+
+
+/* hover activation */
+/* hover activation — underline only */
+.header a:not(.linkedin-icon):hover::before {
+  opacity: 1;
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 80px; /* ⬅ moved nav inward */
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 24px;              /* ⬅ bigger */
+  letter-spacing: 0.12em;       /* ⬅ slightly more premium */
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  margin-left: 32px;
+  font-weight: 500;
+  font-size: 24px;              /* ⬅ bigger */
+  letter-spacing: 0.06em;
+}
+
+
+.header nav a:hover {
+  opacity: 0.7;
+}
+
+/* LinkedIn icon (header) */
+.linkedin-icon {
+  margin-left: 32px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.linkedin-icon img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  opacity: 0.9;
+}
+
+.linkedin-icon:hover {
+  opacity: 0.7;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ======================
+   MAIN CONTAINER
+====================== */
+
+.container {
+  max-width: 900px;
+  margin: 80px auto 120px;
+  padding: 0 40px;
+  flex: 1;
+}
+
+/* ======================
+   PROJECT ROWS
+====================== */
+
+.project-row {
+  margin-bottom: 90px;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.project-row:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+}
+
+.project-text h2 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+
+.project-text h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #a8a8a8;
+  margin-bottom: 26px;
+}
+
+.project-text p {
+  font-size: 20px;
+  color: #d0d0d0;
+  margin-bottom: 18px;
+  max-width: 780px;
+}
+
+/* ======================
+   PROJECT LINKS
+====================== */
+
+.project-links {
+  margin-top: 10px;
+}
+
+.project-links a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.project-links a:hover {
+  opacity: 0.7;
+}
+
+/* ======================
+   ABOUT PAGE TWEAKS
+====================== */
+
+.about-page .container {
+  max-width: 1200px;
+}
+
+.about-page .project-text p {
+  font-size: 22px;
+  line-height: 1.90;
+}
+
+.about-page .project-text h2 {
+  margin-bottom: 24px;
+}
+
+.email-offset a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.email-offset a:hover {
+  opacity: 0.6;
+}
+
+
+
+
+/* ======================
+   ABOUT PAGE 2-COLUMN LAYOUT (FIXED)
+====================== */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+
+.about-image {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 80px; /* 👈 key line */
+}
+
+
+
+.about-image img {
+  max-height: 700px;
+}
+
+
+
+
+
+/* ======================
+   FOOTER (NORMAL FLOW)
+====================== */
+
+.footer {
+  width: 100%;
+  background: #0f0f0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 0 30px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-email {
+  margin-top: 6px;
+  font-size: 1.80em;
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  opacity: 0.7;
+}
+
+/* LinkedIn icon (footer) */
+.footer-linkedin {
+  margin-top: 12px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-linkedin img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  opacity: 0.9;
+}
+
+.footer-linkedin:hover {
+  opacity: 0.7;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-page .container {
+    max-width: 100%;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 24px 30px;
+  }
+
+  .container {
+    padding: 0 30px;
+    margin-top: 60px;
+  }
+
+  .project-text h2 {
+    font-size: 26px;
+  }
+
+  .project-text p {
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+}

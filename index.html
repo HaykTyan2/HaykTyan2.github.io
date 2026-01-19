@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hayk Tserunyan – Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hayk Tserunyan – Software Engineer specializing in backend systems, security, and clean architecture." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body id="home">
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#home" class="logo">Hayk Tserunyan – SOFTWARE ENGINEER</a>
+    <nav>
+      <a href="about.html">ABOUT ME</a>
+      <a href="/assets/resume.pdf" target="_blank">RESUME</a>
+      <a
+        href="https://www.linkedin.com/in/hayktserunyan/"
+        target="_blank"
+        class="linkedin-icon"
+        aria-label="LinkedIn"
+      >
+        <img src="assets/linkedin.png" alt="LinkedIn" />
+      </a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <section class="project-row">
+      <div class="project-text">
+        <h2>Parking Enforcement – License Plate Validation System</h2>
+        <h3>Java (Spring Boot) · Python (FastAPI) · SQLite · OCR</h3>
+
+        <p>
+          Built a full-stack parking enforcement prototype that validates vehicle
+          license plates against a permit database, modeling real-world enforcement
+          workflows used by municipalities and private operators.
+        </p>
+
+        <p>
+          The system accepts uploaded vehicle images, optionally extracts license
+          plates using an AI-based recognition service, and applies confidence-based
+          decision logic to determine permit validity. Enforcement checks are logged
+          with timestamps and reasoning for auditability.
+        </p>
+
+        <p>
+          Architected as three independent services—frontend UI, Spring Boot backend,
+          and a Python FastAPI AI service—emphasizing clean separation of concerns,
+          realistic data persistence, and extensibility.
+        </p>
+      </div>
+
+      <div class="project-links">
+        <a
+          href="https://github.com/HaykTyan2/parking-enforcement-system"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on GitHub →
+        </a>
+      </div>
+    </section>
+
+    <section class="project-row">
+      <div class="project-text">
+        <h2>Encrypted Password Vault API</h2>
+        <h3>Python · FastAPI · Argon2 · JWT · SQLite · Cryptography</h3>
+
+        <p>
+          Built a secure backend API for storing and retrieving encrypted credential
+          data, designed to explore cryptographic best practices, authentication
+          flows, and secure data handling in modern backend systems.
+        </p>
+
+        <p>
+          The service uses Argon2 for password hashing, symmetric encryption for
+          protecting stored credentials, and JWT-based authentication to secure API
+          routes. Sensitive data is encrypted at rest and only decrypted after
+          successful authorization.
+        </p>
+
+        <p>
+          Architected with a modular FastAPI structure separating authentication,
+          cryptographic utilities, database access, and core vault logic, emphasizing
+          maintainability, security boundaries, and clean backend design.
+        </p>
+      </div>
+
+      <div class="project-links">
+        <a
+          href="https://github.com/HaykTyan2/encrypted-password-vault-api"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on GitHub →
+        </a>
+      </div>
+    </section>
+  
+    <section class="project-row">
+      <div class="project-text">
+        <h2>Wikipedia Topic Explorer</h2>
+        <h3>Python · Web Scraping · Crawling · CLI</h3>
+
+        <p>
+          Built a Python-based Wikipedia crawler that explores article link graphs
+          starting from a user-defined topic, with configurable depth limits and page
+          traversal constraints.
+        </p>
+
+        <p>
+          The tool follows only valid Wikipedia article links while explicitly
+          filtering out special pages such as categories, files, and help pages. Users
+          can control crawl depth, total pages visited, and optionally export results
+          to a CSV file for further analysis.
+        </p>
+
+        <p>
+          Designed as a learning-focused project to understand controlled web
+          crawling, link filtering, and modular Python project structure, with clear
+          separation between scraping, parsing, traversal logic, and CLI handling.
+        </p>
+      </div>
+
+      <div class="project-links">
+        <a
+          href="https://github.com/HaykTyan2/wikipedia-topic-explorer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on GitHub →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>© 2025 Hayk Tserunyan</div>
+
+      <a href="mailto:HaykTserunyanCS@outlook.com" class="footer-email">
+        HaykTserunyanCS@outlook.com
+      </a>
+
+
+      <a
+        href="https://www.linkedin.com/in/hayktserunyan/"
+        target="_blank"
+        class="footer-linkedin"
+        aria-label="LinkedIn"
+      >
+        <img src="assets/linkedin.png" alt="LinkedIn" />
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
